@@ -7,7 +7,7 @@ and easy to use across multiple systems.
 
 ## What's Included
 
-- Configuration files for common tools:
+- Configuration files for tools:
   - `neovim`
 
 ## Installation
@@ -16,8 +16,8 @@ and easy to use across multiple systems.
 
 Clone this repository into your home directory or a specific location:
 
-```bash
-git clone https://github.com/yourusername/dotfiles.git ~/dotfiles
+```zsh
+git clone https://github.com/m-alexeev/dotfiles.git ~/dotfiles
 
 cd ~/dotfiles/
 chmod +x ./setup.sh
