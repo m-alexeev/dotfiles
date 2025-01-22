@@ -103,6 +103,7 @@ return {
 
       -- Clangd configuration
       opts.servers.clangd = {
+        filetypes = { "c", "cpp", "h", "hpp" },
         keys = {
           { "<leader>ch", "<cmd>ClangdSwitchSourceHeader<cr>", desc = "Switch Source/Header (C/C++)" },
         },

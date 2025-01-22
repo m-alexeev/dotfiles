@@ -1,10 +1,9 @@
 #! /bin/bash
-
 DOTFILES_DIR=~/dotfiles
 CURRENT_DIR=$(pwd)
 
 TARGET_DIR=~/.config/
-IGNORED_FILES=("README.md" "setup.sh" ".git")
+IGNORED_FILES=("README.md" "setup.sh" ".git" "." "..")
 
 is_ignored() {
   local file=$1
@@ -17,9 +16,10 @@ is_ignored() {
 }
 
 # check if DOTFILES_DIR exists
-if [! -d "$DOTFILES_DIR" ]; then
-  echo "Error: Dotfiles directory: '$DOTFILES_DIR' doesn't exist"
-  exit 1
+if [ ! -d "$DOTFILES_DIR" ]; then
+  echo "Dotfiles directory: '$DOTFILES_DIR' doesn't exist"
+  echo "Creating dotfiles dir"
+  cp -r "$CURRENT_DIR" "$DOTFILES_DIR"
 fi
 
 # Copy all files to TARGET_DIR
