@@ -8,7 +8,7 @@ IGNORED_FILES=("README.md" "setup.sh" ".git" "." "..")
 is_ignored() {
   local file=$1
   for ignored in "${IGNORED_FILES[@]}"; do
-    if [["$file" == "$ignored"]]; then
+    if [[ "$file" == "$ignored" ]]; then
       return 0
     fi
   done
@@ -24,7 +24,7 @@ fi
 
 # Copy all files to TARGET_DIR
 for file in "$DOTFILES_DIR"/*; do
-  filename = $(basename "$file")
+  filename=$(basename "$file")
 
   # Skip ignore files
   if is_ignored "$filename"; then
@@ -33,8 +33,8 @@ for file in "$DOTFILES_DIR"/*; do
   fi
 
   # Create symlinks
-  target="$TARGET_DIR/.$filename"
-  if [-e "$target"]; then
+  target="$TARGET_DIR/$filename"
+  if [ -e "$target" ]; then
     echo "Skipping '$target' (already exists)"
   else
     ln -sf "$file" "$target"

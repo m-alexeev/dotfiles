@@ -171,6 +171,7 @@ return {
         "vim",
         "yaml",
         "gdscript",
+        "c_sharp",
       },
     },
   },
