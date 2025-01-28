@@ -17,7 +17,7 @@ and easy to use across multiple systems.
 Clone this repository into your home directory or a specific location:
 
 ```zsh
-git clone git@github.com:m-alexeev/dotfiles.git ~/dotfiles
+git clone https://github.com/m-alexeev/dotfiles.git ~/dotfiles
 
 cd ~/dotfiles/
 chmod +x ./setup.sh
