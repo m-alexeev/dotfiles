@@ -54,10 +54,17 @@ return {
     -- change some options
     opts = {
       defaults = {
+        file_ignore_patterns = { "node_modules", ".git", ".yarn" },
         layout_strategy = "horizontal",
         layout_config = { prompt_position = "top" },
         sorting_strategy = "ascending",
         winblend = 0,
+      },
+      vimgrep_arguments = {
+        "rg",
+        "--hidden",
+        "--glob=!.git",
+        "--glob=!node_modules",
       },
     },
   },
