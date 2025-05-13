@@ -22,6 +22,28 @@ return {
       })
 
       lspconfig.terraformls.setup({})
+
+      lspconfig.jsonnet_ls.setup({
+        settings = {
+          ext_vars = {
+            foo = "bar",
+          },
+          formatting = {
+            Indent = 2,
+            MaxBlankLines = 2,
+            StringStyle = "single",
+            CommentStyle = "slash",
+            PrettyFieldNames = true,
+            PadArrays = false,
+            PadObjects = true,
+            SortImports = true,
+            UseImplicitPlus = true,
+            StripEverything = false,
+            StripComments = false,
+            StripAllButComments = false,
+          },
+        },
+      })
     end,
   },
 }
