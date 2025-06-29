@@ -6,9 +6,25 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Catppuccin Frappé - No Italics"
+    "dark": "Ayu Mirage"
   },
   "terminal": {
     "font_family": "Hack Nerd Font"
+  },
+  "lsp": {
+    "yaml-language-server": {
+      "settings": {
+        "yaml": {
+          "schemaStore": {
+            "enable": true
+          },
+          "completion": true,
+          "schemas": {
+            "kubernetes": "w2-platform-configuration/**/**.yaml",
+            "https://www.schemastore.org/github-action.json": "**/.github/workflows/*.yaml"
+          }
+        }
+      }
+    }
   }
 }
