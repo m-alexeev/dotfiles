@@ -15,6 +15,8 @@ return {
     -- Specify which formatter to use for jsonnet filetype
     opts.formatters_by_ft = vim.tbl_extend("force", opts.formatters_by_ft or {}, {
       jsonnet = { "jsonnetfmt" },
+      c = { "clang_format" },
+      cpp = { "clang_format" },
     })
   end,
 }

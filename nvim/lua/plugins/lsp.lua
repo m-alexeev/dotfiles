@@ -11,6 +11,12 @@ return {
         end,
       })
 
+      lspconfig.clangd.setup({
+        cmd = { "clangd", "--background-index", "--clang-tidy" },
+        filetypes = { "c", "cpp", "objc", "objcpp" },
+        root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+      })
+
       lspconfig.gh_actions_ls.setup({
         cmd = { "gh-actions-language-server", "--stdio" },
         -- root_dir = lspconfig.util.root_pattern(".github/workflows/*"),
@@ -22,6 +28,15 @@ return {
       })
 
       lspconfig.terraformls.setup({})
+
+      lspconfig.roslyn.setup({
+        filetypes = { "cs" },
+        settings = {
+          roslyn = {
+            fileWatching = true,
+          },
+        },
+      })
 
       lspconfig.jsonnet_ls.setup({
         settings = {
