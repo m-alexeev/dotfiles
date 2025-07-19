@@ -3,11 +3,15 @@ return {
   opts = function(_, opts)
     local conform = require("conform")
 
-    -- Specify the new formatter for jsonnet
     opts.formatters = vim.tbl_extend("force", opts.formatters or {}, {
       jsonnetfmt = {
         command = "jsonnetfmt",
-        args = { "-" }, -- Override args to use stdin
+        args = { "-" },
+        stdin = true,
+      },
+      csharpier = {
+        command = "csharpier",
+        args = { "format", "--write-stdout" },
         stdin = true,
       },
     })
@@ -17,6 +21,7 @@ return {
       jsonnet = { "jsonnetfmt" },
       c = { "clang_format" },
       cpp = { "clang_format" },
+      cs = { "csharpier" },
     })
   end,
 }
