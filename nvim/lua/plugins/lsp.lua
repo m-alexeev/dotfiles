@@ -9,6 +9,9 @@ return {
             client.server_capabilities.documentFormattingProvider = false
           end,
         },
+        cssls = {
+          filetypes = { "css", "scss", "uss" },
+        },
         clangd = {
           cmd = { "clangd", "--background-index", "--clang-tidy" },
           filetypes = { "c", "cpp", "objc", "objcpp" },
