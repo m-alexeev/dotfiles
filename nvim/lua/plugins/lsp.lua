@@ -39,6 +39,7 @@ return {
         },
         jsonnet_ls = {
           settings = {
+            filetypes = { "jsonnet" },
             ext_vars = {
               foo = "bar",
             },
