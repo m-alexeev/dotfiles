@@ -14,6 +14,9 @@ config.macos_window_background_blur = 30
 
 -- Keybinds
 config.keys = {
+	-- Word skipping
+	{ key = "LeftArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bb" }) },
+	{ key = "RightArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bf" }) },
 	-- Move across windows
 	{ key = "h", mods = "CTRL|CMD", action = wezterm.action.ActivatePaneDirection("Left") },
 	{ key = "k", mods = "CTRL|CMD", action = wezterm.action.ActivatePaneDirection("Up") },
@@ -31,7 +34,11 @@ config.keys = {
 		mods = "SHIFT|CMD",
 		action = wezterm.action.SplitPane({ direction = "Left", size = { Percent = 50 } }),
 	},
-	{ key = "k", mods = "SHIFT|CMD", action = wezterm.action.SplitPane({ direction = "Up", size = { Percent = 50 } }) },
+	{
+		key = "k",
+		mods = "SHIFT|CMD",
+		action = wezterm.action.SplitPane({ direction = "Up", size = { Percent = 50 } }),
+	},
 	{
 		key = "l",
 		mods = "SHIFT|CMD",
