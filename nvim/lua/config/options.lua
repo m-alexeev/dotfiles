@@ -7,3 +7,5 @@ vim.filetype.add({
     uss = "css",
   },
 })
+
+vim.opt.swapfile = false
