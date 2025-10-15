@@ -4,13 +4,16 @@ return {
     opts = function(_, opts)
       -- Merge with LazyVim's built-in server configs
       opts.servers = vim.tbl_deep_extend("force", opts.servers or {}, {
-        tsserver = {
-          on_attach = function(client, bufnr)
-            client.server_capabilities.documentFormattingProvider = false
-          end,
-        },
+        -- tsserver = {
+        --   on_attach = function(client, bufnr)
+        --     client.server_capabilities.documentFormattingProvider = false
+        --   end,
+        -- },
         cssls = {
           filetypes = { "css", "scss", "uss" },
+        },
+        vtsls = {
+          cmd = { "vtsls", "--max-old-space-size=8192", "--stdio" },
         },
         clangd = {
           cmd = { "clangd", "--background-index", "--clang-tidy" },
