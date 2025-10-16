@@ -9,6 +9,9 @@ return {
             client.server_capabilities.documentFormattingProvider = false
           end,
         },
+        groovyls = {
+          filetypes = { "groovy", "Jenkinsfile" },
+        },
         cssls = {
           filetypes = { "css", "scss", "uss" },
         },

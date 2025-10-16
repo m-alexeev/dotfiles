@@ -19,6 +19,7 @@ return {
         "yaml",
         "gdscript",
         "c_sharp",
+        "groovy",
       },
     },
   },
