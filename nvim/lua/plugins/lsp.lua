@@ -12,8 +12,16 @@ return {
         groovyls = {
           filetypes = { "groovy", "Jenkinsfile" },
         },
+        -- tsserver = {
+        --   on_attach = function(client, bufnr)
+        --     client.server_capabilities.documentFormattingProvider = false
+        --   end,
+        -- },
         cssls = {
           filetypes = { "css", "scss", "uss" },
+        },
+        vtsls = {
+          cmd = { "vtsls", "--max-old-space-size=8192", "--stdio" },
         },
         clangd = {
           cmd = { "clangd", "--background-index", "--clang-tidy" },
