@@ -4,6 +4,14 @@ return {
     opts = function(_, opts)
       -- Merge with LazyVim's built-in server configs
       opts.servers = vim.tbl_deep_extend("force", opts.servers or {}, {
+        tsserver = {
+          on_attach = function(client, bufnr)
+            client.server_capabilities.documentFormattingProvider = false
+          end,
+        },
+        groovyls = {
+          filetypes = { "groovy", "Jenkinsfile" },
+        },
         -- tsserver = {
         --   on_attach = function(client, bufnr)
         --     client.server_capabilities.documentFormattingProvider = false
