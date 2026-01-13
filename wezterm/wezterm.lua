@@ -30,14 +30,14 @@ config.keys = {
 	},
 	-- Split pane Vertically / Horizontally
 	{
-		key = "h",
-		mods = "SHIFT|CMD",
-		action = wezterm.action.SplitPane({ direction = "Left", size = { Percent = 50 } }),
-	},
-	{
 		key = "k",
 		mods = "SHIFT|CMD",
 		action = wezterm.action.SplitPane({ direction = "Up", size = { Percent = 50 } }),
+	},
+	{
+		key = "h",
+		mods = "SHIFT|CMD",
+		action = wezterm.action.SplitPane({ direction = "Left", size = { Percent = 50 } }),
 	},
 	{
 		key = "l",
