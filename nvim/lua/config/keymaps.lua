@@ -13,4 +13,7 @@ vim.keymap.set("n", "<leader>rp", function()
   end
 end, { desc = "Run Python in toggleterm" })
 
+vim.keymap.set("x", "p", function()
+  return 'pgv"' .. vim.v.register .. "y"
+end, { expr = true, silent = true })
 -- vim.api.nvim_set_keymap("n", "<leader>t", ":ToggleTerm<CR>", { noremap = true, silent = true })

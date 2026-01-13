@@ -45,7 +45,7 @@ config.keys = {
 		action = wezterm.action.SplitPane({ direction = "Right", size = { Percent = 50 } }),
 	},
 	{
-		key = "h",
+		key = "j",
 		mods = "SHIFT|CMD",
 		action = wezterm.action.SplitPane({ direction = "Down", size = { Percent = 50 } }),
 	},

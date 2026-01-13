@@ -4,24 +4,11 @@ return {
     opts = function(_, opts)
       -- Merge with LazyVim's built-in server configs
       opts.servers = vim.tbl_deep_extend("force", opts.servers or {}, {
-        tsserver = {
-          on_attach = function(client, bufnr)
-            client.server_capabilities.documentFormattingProvider = false
-          end,
-        },
         groovyls = {
           filetypes = { "groovy", "Jenkinsfile" },
         },
-        -- tsserver = {
-        --   on_attach = function(client, bufnr)
-        --     client.server_capabilities.documentFormattingProvider = false
-        --   end,
-        -- },
         cssls = {
           filetypes = { "css", "scss", "uss" },
-        },
-        vtsls = {
-          cmd = { "vtsls", "--max-old-space-size=8192", "--stdio" },
         },
         clangd = {
           cmd = { "clangd", "--background-index", "--clang-tidy" },
@@ -35,7 +22,6 @@ return {
           cmd = { "bash-language-server", "start" },
           filetypes = { "sh" },
         },
-        terraformls = {},
         omnisharp = {
           filetypes = { "cs", "csx", "cake" },
           cmd = { "omnisharp-mono", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) },
