@@ -1,4 +1,5 @@
 format = """
+$kubernetes\
 $os\
 $username\
 $hostname\
@@ -10,7 +11,7 @@ $python\
 $character"""
 
 add_newline = false
-palette = "everforest"
+palette = "black_metal_bathory"
 
 [os]
 disabled = false
@@ -38,6 +39,12 @@ Debian = "󰣚"
 Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
 
+[kubernetes]
+disabled = false
+format = '[$symbol$context]($style) '
+symbol = '󱃾 '
+style = 'fg:yellow'
+
 [username]
 show_always = true
 style_root = 'fg:red'
@@ -50,7 +57,7 @@ style = 'fg:blue'
 format = '[@$hostname]($style) '
 
 [directory]
-style = "fg:orange"
+style = "fg:red"
 read_only_style = "fg:orange"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -100,3 +107,32 @@ grey2 = "#9da9a0"
 statusline1 = "#a7c080"
 statusline2 = "#d3c6aa"
 statusline3 = "#e67e80"
+
+[palettes.black_metal_bathory]
+bg_dim = "#000000"
+bg0 = "#000000"
+bg1 = "#121212"
+bg2 = "#222222"
+bg3 = "#333333"
+bg4 = "#444444"
+bg5 = "#999999"
+bg_visual = "#333333"
+bg_red = "#121212"
+bg_green = "#222222"
+bg_blue = "#333333"
+bg_yellow = "#444444"
+
+fg = "#c1c1c1"
+red = "#5f8787"
+orange = "#aaaaaa"
+yellow = "#e78a53"
+green = "#fbcb97"
+aqua = "#aaaaaa"
+blue = "#888888"
+purple = "#999999"
+grey0 = "#444444"
+grey1 = "#999999"
+grey2 = "#c1c1c1"
+statusline1 = "#fbcb97"
+statusline2 = "#c1c1c1"
+statusline3 = "#5f8787"

@@ -3,7 +3,7 @@ DOTFILES_DIR=~/dotfiles
 CURRENT_DIR=$(pwd)
 
 TARGET_DIR=~/.config/
-IGNORED_FILES=("README.md" "setup.sh" ".git" "." "..")
+IGNORED_FILES=("README.md" "setup.sh" "cleanup.sh" ".git" "." "..")
 
 is_ignored() {
   local file=$1

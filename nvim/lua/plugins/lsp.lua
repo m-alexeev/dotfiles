@@ -4,11 +4,11 @@ return {
     opts = function(_, opts)
       -- Merge with LazyVim's built-in server configs
       opts.servers = vim.tbl_deep_extend("force", opts.servers or {}, {
-        groovyls = {
-          filetypes = { "groovy", "Jenkinsfile" },
-        },
         cssls = {
           filetypes = { "css", "scss", "uss" },
+        },
+        yamlls = {
+          filetypes = { "yaml", "yaml.docker-compose", "yaml.github" },
         },
         clangd = {
           cmd = { "clangd", "--background-index", "--clang-tidy" },
