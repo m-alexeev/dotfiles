@@ -1,4 +1,5 @@
 local wezterm = require("wezterm")
+local tabbar = require("tabbar")
 
 local config = wezterm.config_builder()
 
@@ -11,6 +12,11 @@ config.font_size = 13
 config.window_decorations = "RESIZE"
 config.default_cursor_style = "BlinkingBlock"
 config.animation_fps = 60
+
+-- Apply styled tab bar settings (event handler is registered on require)
+for k, v in pairs(tabbar) do
+  config[k] = v
+end
 
 config.initial_cols = 160
 config.initial_rows = 48
