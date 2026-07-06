@@ -11,7 +11,7 @@ $python\
 $character"""
 
 add_newline = false
-palette = "black_metal_bathory"
+palette = "kanagawa_dragon"
 
 [os]
 disabled = false
@@ -136,3 +136,32 @@ grey2 = "#c1c1c1"
 statusline1 = "#fbcb97"
 statusline2 = "#c1c1c1"
 statusline3 = "#5f8787"
+
+[palettes.kanagawa_dragon]
+bg_dim = "#12120f"
+bg0 = "#181616"
+bg1 = "#1d1c19"
+bg2 = "#282727"
+bg3 = "#393836"
+bg4 = "#625e5a"
+bg5 = "#7a8382"
+bg_visual = "#223249"
+bg_red = "#43242b"
+bg_green = "#2b3328"
+bg_blue = "#252535"
+bg_yellow = "#49443c"
+
+fg = "#c5c9c5"
+red = "#c4746e"
+orange = "#b6927b"
+yellow = "#c4b28a"
+green = "#87a987"
+aqua = "#8ea4a2"
+blue = "#8ba4b0"
+purple = "#8992a7"
+grey0 = "#625e5a"
+grey1 = "#737c73"
+grey2 = "#a6a69c"
+statusline1 = "#87a987"
+statusline2 = "#c5c9c5"
+statusline3 = "#e82424"
