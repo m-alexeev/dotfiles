@@ -6,6 +6,9 @@ vim.filetype.add({
   extension = {
     uss = "css",
   },
+  pattern = {
+    ["%.gitlab%-ci%.ya?ml"] = "yaml.gitlab",
+  },
 })
 
 vim.opt.swapfile = false

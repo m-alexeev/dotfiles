@@ -5,7 +5,7 @@ local config = wezterm.config_builder()
 
 local act = wezterm.action
 -- Visuals
-config.color_scheme = "Black Metal (Bathory) (base16)"
+config.color_scheme = "Kanagawa Dragon (Gogh)"
 config.font = wezterm.font("FiraCode Nerd Font", { weight = "Medium" })
 config.font_size = 13
 

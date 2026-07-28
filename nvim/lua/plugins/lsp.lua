@@ -10,6 +10,25 @@ return {
         yamlls = {
           filetypes = { "yaml", "yaml.docker-compose", "yaml.github" },
         },
+        gitlab_ci_ls = {
+          filetypes = { "yaml.gitlab" },
+          cmd = { "gitlab-ci-ls" },
+          root_dir = function(bufnr, on_dir)
+            on_dir(vim.fs.root(vim.api.nvim_buf_get_name(bufnr), {
+              ".gitlab-ci.yml",
+              ".gitlab-ci.yaml",
+              ".gitlab-ci-ls.yml",
+              ".git",
+            }))
+          end,
+          init_options = {
+            cache = vim.fn.stdpath("cache") .. "/gitlab-ci-ls",
+            log_path = vim.fn.stdpath("state") .. "/gitlab-ci-ls.log",
+            options = {
+              dependencies_autocomplete_stage_filtering = false,
+            },
+          },
+        },
         clangd = {
           cmd = { "clangd", "--background-index", "--clang-tidy" },
           filetypes = { "c", "cpp", "objc", "objcpp" },
